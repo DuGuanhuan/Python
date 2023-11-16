@@ -1,0 +1,6 @@
+print("Escape sequence:")
+print("\\n : Insert a newline.")
+print("\\t : Insert a tab.")
+print("\\\" : Insert a double quote character.")
+print("\\\' : Insert a single quote character.")
+print("\\\\ : Insert a backslash character.")

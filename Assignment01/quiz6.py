@@ -1,0 +1,10 @@
+name = input("Enter your name: ")
+street_address = input("Enter street address: ")
+city = input("Enter city: ")
+state = input("Enter state: ")
+postcode = input("Enter postcode: ")
+country = input("Enter country: ")
+
+print(f"\nHi {name}!")
+print(f"This is your address:")
+print(f"{street_address}, {city}, {state} {postcode}, {country}.")
