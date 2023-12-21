@@ -36,15 +36,17 @@ class TreeNode:
 
     def replaceNodeData(self,key,value,lc,rc):
 
+    def __str__(self):
+ 
  # Assumed that all the above methods in Treenode had been implemented.
 
-    #  def __str__(self):        # implement the __str__ function for the TreeNode class such that it output all node that the node is connected to.
-    def __str__(self):
-        left = f"Left Child: [{self.leftChild}]" if self.leftChild else "Left Child: [None]"
-        right = f"Right Child: [{self.rightChild}]" if self.rightChild else "Right Child: [None]"
-        return f"Node: {{ {self.key}: '{self.payload}' }}, {left}, {right}"
 
 
+    # This is the overload built-in iteration function that iterates each node in the left child node and the right child node. 
+
+    def __iter__(self):                 
+
+    # add you code here  
 
 class BinarySearchTree:
 
@@ -250,27 +252,15 @@ class BinarySearchTree:
 
     def __str__(self):
 
-        return str(self.root)   
+        return str(self.root)
 
+   # This is the overload built-in iteration function that iterates the key of the nodes in the BinarySearchTree object. 
 
+    def __iter__(self): 
 
-# This is the overload built-in function to print the TreeNode object to a string
+        if self.root:
 
-# It outputs all node object (Treenode class) in the BinarySearchTree object to the string
+            for elem in self.root:
 
-# For example, a node "b" has "c" as the left node, "d" as the right node and "a" as the parent node.
-
-# Implement the __str__ function for the TreeNode class such that it outputs the string of all nodes that the current node is connected to, besides the parent node.  
-
-# The information of the node for the output is a string that combined a key and value, for example,"{1: 'A'}". 
-
-# If the node is None, then it outputs "None"  
-
-# For example, 
-
-# Please also note that the answer is case sensitive and space sensitive as well. No mark will be awarded if answers in the test cases are not matched,    
-
-def __str__(self):
-
-    # Please write your code here    
+                yield elem
 
